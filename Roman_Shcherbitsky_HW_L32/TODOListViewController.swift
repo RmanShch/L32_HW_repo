@@ -79,8 +79,21 @@ extension TODOListViewController: UITableViewDelegate {
 
 extension TODOListViewController: TODOListItemDetailsDelegate {
     func todoListItemDetailsViewController(_ controller: TODOListItemDetailsViewController, didFinishEditingOfItem item: TODOListItem) {
-        persistenceManager?.save(item: item)
-        loadStoredItems()
+        if item.body == "" {
+            let alertController = UIAlertController(title: "This item will be deleted.", message: "Are you sure?", preferredStyle: .actionSheet)
+            let action1 = UIAlertAction(title: "DELETE", style: .destructive, handler: {_ in
+                self.persistenceManager?.remove(item: item)
+                self.loadStoredItems() })
+            let action2 = UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in
+                self.moveToListItemDetailsViewController()
+            })
+            alertController.addAction(action1)
+            alertController.addAction(action2)
+            present(alertController, animated: true, completion: nil)
+        } else {
+            persistenceManager?.save(item: item)
+            loadStoredItems()
+        }
     }
 }
 

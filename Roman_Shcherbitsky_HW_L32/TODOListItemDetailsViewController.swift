@@ -17,11 +17,13 @@ class TODOListItemDetailsViewController: UIViewController {
     
     var delegate: TODOListItemDetailsDelegate?
     var currentItem: TODOListItem?
+    var initialTitle = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         textView?.text = currentItem?.body
+        initialTitle = textView!.text
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -30,9 +32,10 @@ class TODOListItemDetailsViewController: UIViewController {
         guard var currentItem = currentItem else { return }
         let body = textView?.text ?? ""
         currentItem.body = body
-        currentItem.title = body.split(separator: "\n").first?.base ?? "Item"
+        currentItem.title = body.split(separator: "\n").first?.base ?? ""
         currentItem.lastUpdatedDate = .now
         
+        guard currentItem.body != initialTitle else { return }
         delegate?.todoListItemDetailsViewController(self,
                                                     didFinishEditingOfItem: currentItem)
     }
