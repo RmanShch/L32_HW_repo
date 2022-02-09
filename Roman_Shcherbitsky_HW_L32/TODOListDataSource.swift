@@ -8,9 +8,14 @@
 import Foundation
 import UIKit
 
+protocol TODOListDataSourceDelegate {
+    func todoItemIsDeleted(_ item: TODOListItem)
+}
+
 class TODOListDataSource: NSObject, UITableViewDataSource {
     var items: [TODOListItem]?
     
+    var delegate: TODOListDataSourceDelegate?
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items?.count ?? 0
     }
@@ -33,5 +38,15 @@ class TODOListDataSource: NSObject, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        tableView.beginUpdates()
+        guard let item = items?[indexPath.row] else { return }
+        self.items?.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+        tableView.endUpdates()
+        delegate?.todoItemIsDeleted(item)
+//        guard let item = items?[indexPath.row] else { return }
+//        delegate?.todoItemIsDeleted(item)
+    }
     
 }

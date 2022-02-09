@@ -10,14 +10,14 @@ import RealmSwift
 
 class RealmManager: PersistenceManager {
     private var realm: Realm!
-    private var schemaVersion: UInt64 = 5
+    private var schemaVersion: UInt64 = 6
     
     init() {
-//        let config = Realm.Configuration(schemaVersion: schemaVersion) { migration, oldSchemaVersion in
+        let config = Realm.Configuration(schemaVersion: schemaVersion) //{ migration, oldSchemaVersion in
 //            migration.renameProperty(onType: TODOListItemObject.className(), from: "identifier", to: "id")
 //        }
 //        // Use this configuration when opening realms
-//        Realm.Configuration.defaultConfiguration = config
+        Realm.Configuration.defaultConfiguration = config
         
         realm = try! Realm()
     }
@@ -41,7 +41,11 @@ class RealmManager: PersistenceManager {
     }
     
     func remove(item: TODOListItem) {
-        
+        if let object = realm.object(ofType: TODOListItemObject.self, forPrimaryKey: String(item.createdDate.timeIntervalSince1970)) {
+            try? realm.write {
+                realm.delete(object)
+            }
+        }
     }
     
     func loadAllItems() -> [TODOListItem]? {

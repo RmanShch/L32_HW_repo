@@ -37,6 +37,7 @@ class TODOListViewController: UIViewController {
         persistenceManager = RealmManager()
         tableView.delegate = self
         tableView.dataSource = dataSource
+        dataSource.delegate = self
     }
     
     func loadStoredItems() {
@@ -72,5 +73,12 @@ extension TODOListViewController: TODOListItemDetailsDelegate {
     func todoListItemDetailsViewController(_ controller: TODOListItemDetailsViewController, didFinishEditingOfItem item: TODOListItem) {
         persistenceManager?.save(item: item)
         loadStoredItems()
+    }
+}
+
+extension TODOListViewController: TODOListDataSourceDelegate {
+    func todoItemIsDeleted(_ item: TODOListItem) {
+        persistenceManager?.remove(item: item)
+        //loadStoredItems()
     }
 }
