@@ -13,9 +13,12 @@
 		612460D827B2D441006A8C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612460D627B2D441006A8C6A /* Main.storyboard */; };
 		612460DA27B2D443006A8C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 612460D927B2D443006A8C6A /* Assets.xcassets */; };
 		612460DD27B2D443006A8C6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612460DB27B2D443006A8C6A /* LaunchScreen.storyboard */; };
+		9C2EA2878CBB46FA17E41346 /* Pods_Roman_Shcherbitsky_HW_L32.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B8DF705087DCDA5C803C70 /* Pods_Roman_Shcherbitsky_HW_L32.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A22048F19A775449FFA23D6 /* Pods-Roman_Shcherbitsky_HW_L32.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roman_Shcherbitsky_HW_L32.release.xcconfig"; path = "Target Support Files/Pods-Roman_Shcherbitsky_HW_L32/Pods-Roman_Shcherbitsky_HW_L32.release.xcconfig"; sourceTree = "<group>"; };
+		19B8DF705087DCDA5C803C70 /* Pods_Roman_Shcherbitsky_HW_L32.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roman_Shcherbitsky_HW_L32.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		612460CD27B2D441006A8C6A /* Roman_Shcherbitsky_HW_L32.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roman_Shcherbitsky_HW_L32.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		612460D027B2D441006A8C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		612460D227B2D441006A8C6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		612460D927B2D443006A8C6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		612460DC27B2D443006A8C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		612460DE27B2D443006A8C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8C0645895E4055B6B55E23B /* Pods-Roman_Shcherbitsky_HW_L32.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roman_Shcherbitsky_HW_L32.debug.xcconfig"; path = "Target Support Files/Pods-Roman_Shcherbitsky_HW_L32/Pods-Roman_Shcherbitsky_HW_L32.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2EA2878CBB46FA17E41346 /* Pods_Roman_Shcherbitsky_HW_L32.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05C6C262EF0E673E8924EFBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19B8DF705087DCDA5C803C70 /* Pods_Roman_Shcherbitsky_HW_L32.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		612460C427B2D441006A8C6A = {
 			isa = PBXGroup;
 			children = (
 				612460CF27B2D441006A8C6A /* Roman_Shcherbitsky_HW_L32 */,
 				612460CE27B2D441006A8C6A /* Products */,
+				79C4427A89E133243A4446A8 /* Pods */,
+				05C6C262EF0E673E8924EFBF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = Roman_Shcherbitsky_HW_L32;
 			sourceTree = "<group>";
 		};
+		79C4427A89E133243A4446A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8C0645895E4055B6B55E23B /* Pods-Roman_Shcherbitsky_HW_L32.debug.xcconfig */,
+				0A22048F19A775449FFA23D6 /* Pods-Roman_Shcherbitsky_HW_L32.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 612460E127B2D443006A8C6A /* Build configuration list for PBXNativeTarget "Roman_Shcherbitsky_HW_L32" */;
 			buildPhases = (
+				F3F6C7CC958FAA5FCEC47284 /* [CP] Check Pods Manifest.lock */,
 				612460C927B2D441006A8C6A /* Sources */,
 				612460CA27B2D441006A8C6A /* Frameworks */,
 				612460CB27B2D441006A8C6A /* Resources */,
+				476FC4F6BF87BA4EE31DE8EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		476FC4F6BF87BA4EE31DE8EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Roman_Shcherbitsky_HW_L32/Pods-Roman_Shcherbitsky_HW_L32-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Roman_Shcherbitsky_HW_L32/Pods-Roman_Shcherbitsky_HW_L32-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Roman_Shcherbitsky_HW_L32/Pods-Roman_Shcherbitsky_HW_L32-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3F6C7CC958FAA5FCEC47284 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Roman_Shcherbitsky_HW_L32-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		612460C927B2D441006A8C6A /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		612460E227B2D443006A8C6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8C0645895E4055B6B55E23B /* Pods-Roman_Shcherbitsky_HW_L32.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		612460E327B2D443006A8C6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A22048F19A775449FFA23D6 /* Pods-Roman_Shcherbitsky_HW_L32.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
