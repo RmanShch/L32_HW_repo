@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		610F43B927B3F6A600BBF91E /* TODOListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610F43B827B3F6A600BBF91E /* TODOListItem.swift */; };
+		610F43BB27B3F6D100BBF91E /* TODOListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610F43BA27B3F6D100BBF91E /* TODOListDataSource.swift */; };
+		610F43BD27B3F6F600BBF91E /* TODOListItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610F43BC27B3F6F600BBF91E /* TODOListItemDetailsViewController.swift */; };
+		610F43BF27B3F72000BBF91E /* TODOListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610F43BE27B3F72000BBF91E /* TODOListViewController.swift */; };
+		610F43C227B3F7A400BBF91E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610F43C127B3F7A400BBF91E /* PersistenceManager.swift */; };
+		610F43C427B3F7BB00BBF91E /* TODOListItemObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610F43C327B3F7BB00BBF91E /* TODOListItemObject.swift */; };
 		612460D127B2D441006A8C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612460D027B2D441006A8C6A /* AppDelegate.swift */; };
 		612460D327B2D441006A8C6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612460D227B2D441006A8C6A /* SceneDelegate.swift */; };
-		612460D527B2D441006A8C6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612460D427B2D441006A8C6A /* ViewController.swift */; };
 		612460D827B2D441006A8C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612460D627B2D441006A8C6A /* Main.storyboard */; };
 		612460DA27B2D443006A8C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 612460D927B2D443006A8C6A /* Assets.xcassets */; };
 		612460DD27B2D443006A8C6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612460DB27B2D443006A8C6A /* LaunchScreen.storyboard */; };
@@ -19,10 +24,15 @@
 /* Begin PBXFileReference section */
 		0A22048F19A775449FFA23D6 /* Pods-Roman_Shcherbitsky_HW_L32.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roman_Shcherbitsky_HW_L32.release.xcconfig"; path = "Target Support Files/Pods-Roman_Shcherbitsky_HW_L32/Pods-Roman_Shcherbitsky_HW_L32.release.xcconfig"; sourceTree = "<group>"; };
 		19B8DF705087DCDA5C803C70 /* Pods_Roman_Shcherbitsky_HW_L32.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roman_Shcherbitsky_HW_L32.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		610F43B827B3F6A600BBF91E /* TODOListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOListItem.swift; sourceTree = "<group>"; };
+		610F43BA27B3F6D100BBF91E /* TODOListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOListDataSource.swift; sourceTree = "<group>"; };
+		610F43BC27B3F6F600BBF91E /* TODOListItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOListItemDetailsViewController.swift; sourceTree = "<group>"; };
+		610F43BE27B3F72000BBF91E /* TODOListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOListViewController.swift; sourceTree = "<group>"; };
+		610F43C127B3F7A400BBF91E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		610F43C327B3F7BB00BBF91E /* TODOListItemObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOListItemObject.swift; sourceTree = "<group>"; };
 		612460CD27B2D441006A8C6A /* Roman_Shcherbitsky_HW_L32.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roman_Shcherbitsky_HW_L32.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		612460D027B2D441006A8C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		612460D227B2D441006A8C6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		612460D427B2D441006A8C6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		612460D727B2D441006A8C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		612460D927B2D443006A8C6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		612460DC27B2D443006A8C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +60,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		610F43C027B3F79400BBF91E /* PersistenceStorage */ = {
+			isa = PBXGroup;
+			children = (
+				610F43C127B3F7A400BBF91E /* PersistenceManager.swift */,
+				610F43C327B3F7BB00BBF91E /* TODOListItemObject.swift */,
+			);
+			path = PersistenceStorage;
+			sourceTree = "<group>";
+		};
 		612460C427B2D441006A8C6A = {
 			isa = PBXGroup;
 			children = (
@@ -71,13 +90,17 @@
 		612460CF27B2D441006A8C6A /* Roman_Shcherbitsky_HW_L32 */ = {
 			isa = PBXGroup;
 			children = (
+				610F43C027B3F79400BBF91E /* PersistenceStorage */,
 				612460D027B2D441006A8C6A /* AppDelegate.swift */,
 				612460D227B2D441006A8C6A /* SceneDelegate.swift */,
-				612460D427B2D441006A8C6A /* ViewController.swift */,
+				610F43BE27B3F72000BBF91E /* TODOListViewController.swift */,
 				612460D627B2D441006A8C6A /* Main.storyboard */,
 				612460D927B2D443006A8C6A /* Assets.xcassets */,
 				612460DB27B2D443006A8C6A /* LaunchScreen.storyboard */,
 				612460DE27B2D443006A8C6A /* Info.plist */,
+				610F43B827B3F6A600BBF91E /* TODOListItem.swift */,
+				610F43BA27B3F6D100BBF91E /* TODOListDataSource.swift */,
+				610F43BC27B3F6F600BBF91E /* TODOListItemDetailsViewController.swift */,
 			);
 			path = Roman_Shcherbitsky_HW_L32;
 			sourceTree = "<group>";
@@ -88,7 +111,6 @@
 				A8C0645895E4055B6B55E23B /* Pods-Roman_Shcherbitsky_HW_L32.debug.xcconfig */,
 				0A22048F19A775449FFA23D6 /* Pods-Roman_Shcherbitsky_HW_L32.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,8 +229,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				612460D527B2D441006A8C6A /* ViewController.swift in Sources */,
+				610F43BF27B3F72000BBF91E /* TODOListViewController.swift in Sources */,
+				610F43BB27B3F6D100BBF91E /* TODOListDataSource.swift in Sources */,
+				610F43C227B3F7A400BBF91E /* PersistenceManager.swift in Sources */,
+				610F43C427B3F7BB00BBF91E /* TODOListItemObject.swift in Sources */,
 				612460D127B2D441006A8C6A /* AppDelegate.swift in Sources */,
+				610F43B927B3F6A600BBF91E /* TODOListItem.swift in Sources */,
+				610F43BD27B3F6F600BBF91E /* TODOListItemDetailsViewController.swift in Sources */,
 				612460D327B2D441006A8C6A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
