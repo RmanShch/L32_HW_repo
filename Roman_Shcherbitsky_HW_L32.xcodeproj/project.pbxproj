@@ -13,6 +13,8 @@
 		610F43BF27B3F72000BBF91E /* TODOListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610F43BE27B3F72000BBF91E /* TODOListViewController.swift */; };
 		610F43C227B3F7A400BBF91E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610F43C127B3F7A400BBF91E /* PersistenceManager.swift */; };
 		610F43C427B3F7BB00BBF91E /* TODOListItemObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610F43C327B3F7BB00BBF91E /* TODOListItemObject.swift */; };
+		610F43C827B44C4900BBF91E /* TODOItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610F43C627B44C4900BBF91E /* TODOItemCell.swift */; };
+		610F43C927B44C4900BBF91E /* TODOItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 610F43C727B44C4900BBF91E /* TODOItemCell.xib */; };
 		612460D127B2D441006A8C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612460D027B2D441006A8C6A /* AppDelegate.swift */; };
 		612460D327B2D441006A8C6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612460D227B2D441006A8C6A /* SceneDelegate.swift */; };
 		612460D827B2D441006A8C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612460D627B2D441006A8C6A /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		610F43BE27B3F72000BBF91E /* TODOListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOListViewController.swift; sourceTree = "<group>"; };
 		610F43C127B3F7A400BBF91E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		610F43C327B3F7BB00BBF91E /* TODOListItemObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOListItemObject.swift; sourceTree = "<group>"; };
+		610F43C627B44C4900BBF91E /* TODOItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOItemCell.swift; sourceTree = "<group>"; };
+		610F43C727B44C4900BBF91E /* TODOItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TODOItemCell.xib; sourceTree = "<group>"; };
 		612460CD27B2D441006A8C6A /* Roman_Shcherbitsky_HW_L32.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roman_Shcherbitsky_HW_L32.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		612460D027B2D441006A8C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		612460D227B2D441006A8C6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,15 @@
 			path = PersistenceStorage;
 			sourceTree = "<group>";
 		};
+		610F43C527B44BEE00BBF91E /* TODOItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				610F43C627B44C4900BBF91E /* TODOItemCell.swift */,
+				610F43C727B44C4900BBF91E /* TODOItemCell.xib */,
+			);
+			path = TODOItemCell;
+			sourceTree = "<group>";
+		};
 		612460C427B2D441006A8C6A = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +103,7 @@
 		612460CF27B2D441006A8C6A /* Roman_Shcherbitsky_HW_L32 */ = {
 			isa = PBXGroup;
 			children = (
+				610F43C527B44BEE00BBF91E /* TODOItemCell */,
 				610F43C027B3F79400BBF91E /* PersistenceStorage */,
 				612460D027B2D441006A8C6A /* AppDelegate.swift */,
 				612460D227B2D441006A8C6A /* SceneDelegate.swift */,
@@ -176,6 +190,7 @@
 			files = (
 				612460DD27B2D443006A8C6A /* LaunchScreen.storyboard in Resources */,
 				612460DA27B2D443006A8C6A /* Assets.xcassets in Resources */,
+				610F43C927B44C4900BBF91E /* TODOItemCell.xib in Resources */,
 				612460D827B2D441006A8C6A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +248,7 @@
 				610F43BB27B3F6D100BBF91E /* TODOListDataSource.swift in Sources */,
 				610F43C227B3F7A400BBF91E /* PersistenceManager.swift in Sources */,
 				610F43C427B3F7BB00BBF91E /* TODOListItemObject.swift in Sources */,
+				610F43C827B44C4900BBF91E /* TODOItemCell.swift in Sources */,
 				612460D127B2D441006A8C6A /* AppDelegate.swift in Sources */,
 				610F43B927B3F6A600BBF91E /* TODOListItem.swift in Sources */,
 				610F43BD27B3F6F600BBF91E /* TODOListItemDetailsViewController.swift in Sources */,

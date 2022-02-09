@@ -7,6 +7,10 @@
 
 import UIKit
 
+fileprivate struct ViewConfig {
+    static let kCellHeight: CGFloat = 55
+}
+
 protocol PersistenceManager {
     func save(item: TODOListItem)
     func remove(item: TODOListItem)
@@ -66,6 +70,10 @@ extension TODOListViewController: UITableViewDelegate {
         guard let item = dataSource.items?[indexPath.row] else { return }
         selectedItem = item
         moveToListItemDetailsViewController()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return ViewConfig.kCellHeight
     }
 }
 

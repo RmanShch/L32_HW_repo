@@ -16,6 +16,13 @@ class TODOListDataSource: NSObject, UITableViewDataSource {
     var items: [TODOListItem]?
     
     var delegate: TODOListDataSourceDelegate?
+    
+    func makingDateStringWithDateFormat(with string: String, with date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = string
+        return dateFormatter.string(from: date)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items?.count ?? 0
     }
@@ -23,19 +30,22 @@ class TODOListDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let items = items else { return UITableViewCell() }
 
-        let id = "default"
-        let cell: UITableViewCell
-        if let reusedCell = tableView.dequeueReusableCell(withIdentifier: id) {
-            cell = reusedCell
-        } else {
-            cell = UITableViewCell(style: .default, reuseIdentifier: id)
+        let id = "itemCell"
+        var cell = tableView.dequeueReusableCell(withIdentifier: id) as? TODOItemCell
+        if cell == nil {
+            cell = Bundle.main.loadNibNamed("TODOItemCell", owner: nil, options: nil)?[0] as? TODOItemCell
         }
         
         let item = items[indexPath.row]
         
-        cell.textLabel?.text = item.title
+        let editDayString = makingDateStringWithDateFormat(with: "dd MMM yyyy", with: item.lastUpdatedDate)
+        let editTimeString = makingDateStringWithDateFormat(with: "HH:mm", with: item.lastUpdatedDate)
         
-        return cell
+        cell?.editDayLabel.text = editDayString
+        cell?.editTimeLabel.text = editTimeString
+        cell?.titleLabel?.text = item.title
+        
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
